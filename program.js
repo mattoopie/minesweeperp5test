@@ -37,8 +37,10 @@ var field;
 		if (keyCode==82){
 			field.startNewGame();
 		}
-		if (keyCode==116){
-			field.mousePressed(mouseX,mouseY,RIGHT);
+		if (keyCode==70){
+			if (!field.isReplaying() && mouseX<width && mouseY<height){
+				field.mousePressed(mouseX,mouseY,RIGHT);
+			}
 		}
 		redraw();
 	}
