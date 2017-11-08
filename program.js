@@ -34,6 +34,12 @@ var field;
 		if (keyCode==32){
 			field.replayNextStep();
 		}
+		if (keyCode==82){
+			field.startNewGame();
+		}
+		if (keyCode==116){
+			field.mousePressed(mouseX,mouseY,RIGHT);
+		}
 		redraw();
 	}
 	
@@ -155,9 +161,6 @@ var field;
 					this.moves.push([mouseX, mouseY, mouseButton]);
 				}
 			} 
-		}
-		if(mouseButton == CENTER) {
-			this.startNewGame();
 		}
 	}
 
