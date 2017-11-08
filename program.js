@@ -1,7 +1,7 @@
 var field;
 var squareSize;
 function setup() {
-	createCanvas(windowWidth - windowWidth / 20, windowHeight - windowHeight / 20);
+	createCanvas(windowWidth - windowWidth / 10, windowHeight - windowHeight / 10);
 	var size = 30;
 	if (width > height) {
 		squareSize = height / size;
@@ -162,6 +162,9 @@ Field.prototype.mousePressed = function (mouseX, mouseY, mouseButton) {
 				this.moves.push([mouseX, mouseY, mouseButton]);
 			}
 		}
+	}
+	if(mouseButton == CENTER) {
+			this.startNewGame();
 	}
 }
 
