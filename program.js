@@ -145,7 +145,7 @@ var field;
 	Field.prototype.mousePressed = function(mouseX, mouseY, mouseButton) {
 		if (!this.gameOver) {
 			var tile = this.getTileOnLocation(mouseX, mouseY);
-			if (mouseButton == LEFT) {
+			if (mouseButton == LEFT && tile) {
 				if (!tile.isFlagged()) {
 					if (!this.replaying) {
 						this.moves.push([ mouseX, mouseY, mouseButton ]);
@@ -157,7 +157,7 @@ var field;
 						this.revealAround(tilesRevealed, tile);
 					}
 				}
-			} else if (mouseButton == RIGHT){
+			} else if (mouseButton == RIGHT && tile){
 				tile.flag();
 				if (!this.replaying) {
 					this.moves.push([mouseX, mouseY, mouseButton]);
