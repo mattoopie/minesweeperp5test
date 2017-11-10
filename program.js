@@ -1,7 +1,7 @@
 var field;
 var squareSize;
 function setup() {
-	createCanvas(windowWidth - windowWidth / 10, windowHeight - windowHeight / 10,WEBGL);
+	createCanvas(windowWidth - windowWidth / 10, windowHeight - windowHeight / 10);
 	var size = 30;
 	if (width > height) {
 		squareSize = height / size;
